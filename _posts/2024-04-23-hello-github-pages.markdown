@@ -33,27 +33,61 @@ In this project we'll be building my basic personal GitHub Pages site with Jekyl
 
 Jekyll is a static site generator which takes text written in a variety of markup languages and uses layouts to create a site. It allows for 
 
-### What you'll need to start this project
+### What you'll need to before starting this project
 
 - WSL or Linux recommended (I used a debian WSL on Windows 11)
 - A GitHub Account
 - GitHub CLI
 
-### Create a GitHub Repo
+### 1. Create a public repo
+Create a new repository in your personal account and name the repository `<username>.github.io`. We'll also tell github to add a README.md.
 
-#### 1. Create a public repo
+This repository is where all the source and site contents will be stored. Later we'll adjust the repository settings so that GitHub will automatically publish changes made to a specific branch.
 
-#### 2. Clone the repo
+### 2. Clone the repo
 
-#### 3. Install tools and dependencies
+Now open a terminal and clone your newly created repo (personally like to use VS code for my development), the command you run should look something like this:
 
-#### 4. Test your site locally
+`gh clone repo <username>.github.io`
 
-#### 5. Create a branch to push your changes to before they are published
+If you've never run your github CLI before, you may not be logged in, to log in to git, use the following and then follow the prompts:
 
-#### 6. Push your changes
+`gh auth login`
 
-#### 7. Configure your GitHub Pages source
+### 3. Install tools and dependencies
 
-#### 8. Publish your changes to your site
+Now that you've got a repo, we've got to install some dependencies before we can start building our site. For my site, I'm going to use a static site generator supported by GitHub Pages called Jekyll.
+
+I have a debian WSL, so to install the dependencies for Jekyll, I need to run the following commands:
+
+`sudo apt-get install ruby-full build-essential zlib1g-dev`
+
+Let's make sure ruby and gem installed correctly, the following command should return a version:
+
+`gem -v`
+
+Success! Finally, let's install Jekyll and bundler:
+
+```
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+gem install jekyll bundler
+```
+
+That should be it for our dependencies for now, let's go ahead and initialize out Jekyll site!
+
+### 4. Create new Jekyll site and modify defaults
+
+To start a new site, we can use jek
+
+### 5. Test your site locally
+
+### 6. Create a branch to push your changes to before they are published
+
+### 7. Push your changes
+
+### 8. Configure your GitHub Pages source
+
+### 9. Publish your changes to your site
 
