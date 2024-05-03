@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hello Github Pages!"
-date:   2024-04-23 09:22:00 -0700
+date:   2024-05-03 07:56:00 -0700
 categories: general
 ---
 One doesn't simply start developing something new without a good old `hello world` project, right?
