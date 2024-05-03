@@ -112,8 +112,6 @@ Finally to run our site locally so we can preview it, we can run jekyll serve wi
 
 `bundle exec jekyll serve`
 
-This will start a development server locally at http://127.0.0.1:4000 where we can preview our site as we develop!
-
 <strong>NOTE:</strong> If you run into an issue where there is an issue using webrick and the server can't start, you can fix the issue by running:
 
 `bundle add webrick`
@@ -122,13 +120,53 @@ And then retry starting your local development server:
 
 `bundle exec jekyll serve`
 
-### 6. Create a branch to push your changes to before they are published
+If all has gone correctly, this will start a development server locally at http://127.0.0.1:4000 where we can preview our site as we modify our files and develop our site!
 
+### 6. Create a branch to push your changes to before they are published (optional)
 
+Finally, if you'd like to follow some sort of software development lifecycle paradigm like <a href="https://www.gitkraken.com/learn/git/git-flow">git flow</a>, <a href="https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development">trunk based development</a>, or your own method, I'd recommend making a new branch to which you can commit your ongoing changes as you build out posts or part of your site.
 
-### 7. Push your changes
+To follow a git flow like process we'll start a develop branch to commit our work to so far:
 
-### 8. Configure your GitHub Pages source
+`git checkout -b 'develop`
 
-### 9. Publish your changes to your site
+Then we'll add all our changes, commit, and then push them to load our changes into GitHub.
 
+```
+git add -A
+git commit -m "Initial Commit"
+git push origin develop
+```
+
+In order to follow our flow process, we could also then optionally change our branch again as we work on setting up our first customizations and first post.
+
+`git checkout -b 'feature/post-1'`
+
+### 7. Configure your GitHub Pages source
+
+So far we have made a new repo, setup a blank Jekyll site, setup our development environment, setup new branches, and pushed some code. Next, we'll configure the settings on the GitHub repository so that GitHub knows how and where to publish our pages from.
+
+Navigate to your repository on GitHub and go to the <strong>Settings</strong> tab.
+
+On the left hand navigation, there should be a <strong>Pages</strong> section, select it.
+
+On this page, we will set the following options:
+
+<strong>Source:</strong> Deploy from a branch
+
+<strong>Branch:</strong> main, /(root)
+
+### 8. Publish your changes to your site
+
+Finally, in order to bring your changes live, open a pull request and merge your changes from the develop branch to the main branch. Once the merge is complete, your new site should be live!
+
+Navigate to <username>.github.io and see how it looks!
+
+## Conclusion
+That's it for this post, I hope it's useful in helping you get your Jekyll GitHub page up and running!
+
+Keep an eye out for a follow up posts where we'll talk about adding posts, themes, and customizing the home page.
+
+As I complete them, I'll add links here:
+
+Dgeebs out!
