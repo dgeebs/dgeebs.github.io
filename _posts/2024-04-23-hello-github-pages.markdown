@@ -72,6 +72,7 @@ Success! Finally, let's install Jekyll and bundler:
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 gem install jekyll bundler
 ```
 
@@ -79,11 +80,51 @@ That should be it for our dependencies for now, let's go ahead and initialize ou
 
 ### 4. Create new Jekyll site and modify defaults
 
-To start a new site, we can use jek
+To start a new site, we can use the jekyll CLI to create the basic structure of a new Jekyll site:
+
+`jekyll new --skip-bundle .`
+
+After we have the basic structure down, we're going to modify some default dependencies for our site to make it compatible with GitHub pages.
+
+In _config.yml
+
+1. Update the title of our site
+2. Update the description of our site
+3. Update the domain, url, and baseurl of our site
+
+In Gemfile
+
+1. Remove or comment out the following line:
+
+`gem "jekyll"`
+
+2. Replace the line starting with `# gem "github-pages"` with the following:
+
+`gem "github-pages", "~> 231", group: :jekyll_plugins`
 
 ### 5. Test your site locally
 
+To test our site locally, we first need to install our updated dependencies that we added to the Gemfile file. We can do so by using bundle install command installed with ruby earlier:
+
+`bundle install`
+
+Finally to run our site locally so we can preview it, we can run jekyll serve with bundle:
+
+`bundle exec jekyll serve`
+
+This will start a development server locally at http://127.0.0.1:4000 where we can preview our site as we develop!
+
+<strong>NOTE:</strong> If you run into an issue where there is an issue using webrick and the server can't start, you can fix the issue by running:
+
+`bundle add webrick`
+
+And then retry starting your local development server:
+
+`bundle exec jekyll serve`
+
 ### 6. Create a branch to push your changes to before they are published
+
+
 
 ### 7. Push your changes
 
