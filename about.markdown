@@ -16,7 +16,7 @@ Some roles that I've held along the way include:
 - Cybersecurity Analyst
 - SIEM Engineer
 - SIEM Professional Services Engineer
-- Trainer for AlienVault USM
+- AlienVault USM Instructor
 - Penetration Tester
 - Speaker
 - CTF Architect, Developer, and MC
