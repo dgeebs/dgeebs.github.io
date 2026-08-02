@@ -5,16 +5,21 @@ date:   2024-05-03 07:56:00 -0700
 categories: general
 ---
 One doesn't simply start developing something new without a good old `hello world` project, right?
+<br/>
+<br/>
 
 `Insert Clever One Does Not Simply... Meme Here`
 
+<br/>
+
 Well this post is that `hello world` and goes to show that in the expansive world that is technology, there's always something new to learn!
-
+<br/><br/>
 So, here we begin!
-
+<br/><br/>
 Since setting up this site with Github Pages is a new one for me, I think it appropriate that my first post covers what I've learned from getting my personal github pages up and running.
 
 ## Why am I starting this project?
+
 I've long been considering starting some sort of blog to share some of my experiences to help me process and retain what I've learned as well as help others who may be just getting started on a particular topic. With this blog on Github Pages, I hope to finally start doing something about that. Not only because, "Sharing is Caring", but also since I know the power and value of reteaching what you have learned. Reteaching and recording what you've learned helps you to not only "get by" with what you've learned, but to think critically, drill further into it, expand it, and organize that knowledge in a way that it can be understood by others. Doing so also really cements your own understanding in a topic as well.
 
 And I wanted to learn how to use github pages and this was a great excuse!
@@ -164,9 +169,3 @@ Navigate to <username>.github.io and see how it looks!
 
 ## Conclusion
 That's it for this post, I hope it's useful in helping you get your Jekyll GitHub page up and running!
-
-Keep an eye out for a follow up posts where we'll talk about adding posts, themes, and customizing the home page.
-
-As I complete them, I'll add links here:
-
-Dgeebs out!

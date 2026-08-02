@@ -1,0 +1,25 @@
+---
+layout: page
+---
+
+<div class="flex flex-col items-center justify-center min-h-screen px-6">
+  <article class="w-full max-w-4xl section-light shadow-md rounded-sm p-8">
+    <header class="mb-6">
+      <h1 class="text-4xl font-bold mb-4">{{ page.title }}</h1>
+      <div class="text-center">
+        {% if page.tags.size != 0 %}
+          <div class="flex flex-wrap justify-center gap-2">
+            {% for tag in page.tags %}
+              <span class="inline-block px-3 py-1 text-sm font-medium rounded-full">
+                <a class="!no-underline text-gray-700 hover:text-gray-900" href="{{ site.baseurl }}/tag#{{ tag }}">{{ tag }}</a>
+              </span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </header>
+    <section class="prose prose-gray text-left">
+      {{ content }}
+    </section>
+  </article>
+</div>
